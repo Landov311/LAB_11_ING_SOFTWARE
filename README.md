@@ -1,7 +1,7 @@
 # LAB_11_ING_SOFTWARE
 Pruebas de éxito y 2 casos extremos
 
-*casos extremos*
+***casos extremos***
 
 **Caso Extremo:** ciudad desconocida
 
