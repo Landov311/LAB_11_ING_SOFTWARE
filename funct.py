@@ -30,7 +30,7 @@ def get_city_coordinates(city_name, country):
     b= float(city.iloc[0]['lng'])
     print(f"La latitud y longitud de {city_name}:{country} es {a} y {b}")
 
-    return float(city.iloc[0]['lat']), float(city.iloc[0]['lng'])  #Sacar un longitud y latitud
+    return float(city.iloc[0]['lat']), float(city.iloc[0]['lng'])  #Sacar latitud y longitud
 
 
 def get_coordinates(city, country):

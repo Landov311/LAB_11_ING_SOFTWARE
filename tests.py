@@ -1,9 +1,41 @@
 import unittest
 import funct
 
-def testing_same_city(city1, country1, lat1, lon1, city2, country2, lat2, lon2):
-    ## Misma ciudad
-    ## Requiere haber corrido el programa anterior
-    assert funct.get_city_coordinates(city1,country1)==lat1,lon1
-    assert funct.get_city_coordinates(city2,country2)==lat1,lon1
-    assert funct.haversine(lat1,lon1,lat2,lon2)==0
+class TestCityFunctions(unittest.TestCase):
+
+    def test_unknown_city_csv(self):
+        city1, country1 = "UnknownCity1", "Country1"
+        city2, country2 = "UnknownCity2", "Country2"
+        lat1, lon1 = funct.get_city_coordinates(city1, country1)
+        lat2, lon2 = funct.get_city_coordinates(city2, country2)
+        self.assertIsNone(lat1, f"La ciudad '{city1}' no se encontró en el archivo.")
+        self.assertIsNone(lon1, f"La ciudad '{city1}' no se encontró en el archivo.")
+        self.assertIsNone(lat2, f"La ciudad '{city2}' no se encontró en el archivo.")
+        self.assertIsNone(lon2, f"La ciudad '{city2}' no se encontró en el archivo.")
+
+    def test_unknown_city_api(self):
+        city1, country1 = "UnknownCity1", "Country1"
+        city2, country2 = "UnknownCity2", "Country2"
+        lat1, lon1 = funct.get_coordinates(city1, country1)
+        lat2, lon2 = funct.get_coordinates(city2, country2)
+        self.assertIsNone(lat1, f"No se encontraron coordenadas para {city1}, {country1}.")
+        self.assertIsNone(lon1, f"No se encontraron coordenadas para {city1}, {country1}.")
+        self.assertIsNone(lat2, f"No se encontraron coordenadas para {city2}, {country2}.")
+        self.assertIsNone(lon2, f"No se encontraron coordenadas para {city2}, {country2}.")
+
+    def test_same_city_csv(self):
+        city, country = "Lima", "Peru"
+        lat1, lon1 = funct.get_city_coordinates(city, country)
+        lat2, lon2 = funct.get_city_coordinates(city, country)
+        distance = funct.haversine(lat1, lon1, lat2, lon2)
+        self.assertEqual(distance, 0, "La distancia debe ser cero para la misma ciudad y país usando CSV.")
+
+    def test_same_city_api(self):
+        city, country = "Lima", "Peru"
+        lat1, lon1 = funct.get_coordinates(city, country)
+        lat2, lon2 = funct.get_coordinates(city, country)
+        distance = funct.haversine(lat1, lon1, lat2, lon2)
+        self.assertEqual(distance, 0, "La distancia debe ser cero para la misma ciudad y país usando la API.")
+
+if __name__ == "__main__":
+    unittest.main()

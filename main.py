@@ -1,4 +1,5 @@
 import funct
+import tests
 
 def main():
    print("Selccione la forma en el cual desea obtener su respuesta:")
@@ -37,3 +38,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
