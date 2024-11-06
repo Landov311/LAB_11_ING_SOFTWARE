@@ -2,6 +2,10 @@
 Pruebas de éxito y 2 casos extremos
 
 **Links de tablas:**
+Casos de Prueba
+
+Casos Extremos
+https://drive.google.com/file/d/1hJ5jRQSHDH3mAptd3FDgBcKa5xtsUZ9L/view?usp=sharing
 
 
 ***CASOS EXTREMOS***
@@ -18,10 +22,8 @@ Pruebas de éxito y 2 casos extremos
 5. Presionar la tecla "Enter".
 
 **Text Data:**
-    ciudad1: Atlantida
-    ciudad2: Tokyo o tokio
-    pais1: Mar
-    pais2: Japan o Tokio
+- city1, country1 = "UnknownCity1", "Country1"
+- city2, country2 = "UnknownCity2", "Country2"
 
 **Resultado Esperado:** Mostrara los siguientes mensajes "No se pudo calcular la distancia. Verifique los nombres de las ciudades.
 
@@ -37,9 +39,9 @@ Pruebas de éxito y 2 casos extremos
 5. Presionar la tecla "Enter".
 
 **Text Data:**
-    ciudad1: Tokyo o Tokio
-    ciudad2: Tokyo o Tokio
-    pais1: Japan o Japon
-    pais2: Japan o Japon
+- city1: Tokyo o Tokio
+- city2: Tokyo o Tokio
+- country1: Japan o Japon
+- country2: Japan o Japon
 
 **Resultado Esperado:** Se muestran las coordenadas de la ciudad 2 veces y la distancia es igual a 0.
