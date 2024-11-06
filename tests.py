@@ -2,6 +2,15 @@ import unittest
 import funct
 
 class TestCityFunctions(unittest.TestCase):
+    def Success_case(city1,city2,country1,country2,switch):
+        if switch==1:
+            lat1, lon1 = funct.get_city_coordinates(city1,country1)
+            lat2, lon2 = funct.get_city_coordinates(city2,country2)
+        elif switch==2:
+            lat1, lon1 = funct.get_coordinates(city1,country1)
+            lat2, lon2 = funct.get_coordinates(city2,country2)
+        distance = funct.haversine(lat1, lon1, lat2, lon2)
+        print("Son ciudades y países diferentes, entonces esta es la distancia  {distance} ")
 
     def test_unknown_city_csv(self):
         city1, country1 = "UnknownCity1", "Country1"
