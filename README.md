@@ -45,3 +45,23 @@ https://drive.google.com/file/d/1hJ5jRQSHDH3mAptd3FDgBcKa5xtsUZ9L/view?usp=shari
 - country2: Japan o Japon
 
 **Resultado Esperado:** Se muestran las coordenadas de la ciudad 2 veces y la distancia es igual a 0.
+
+*** Casos Éxitos***
+**Caso éxito:** Se ingresan diferentes ciudades
+
+**Precondicion:** El usuario debe poseer el código api que creamos y conección a internet, después debe ingresar dos ciudades y países diferentes.
+
+**Pasos de Prueba:**
+1. Correr el código.
+2. Escoger la fuente a usar (cualquiera)
+3. Ingresar el nombre de las dos ciudades.
+4. Ingresar el nombre del país que correponde a las ciudades ingresadas.
+5. Presionar la tecla "Enter" y obtener los resultados.
+
+**Text Data:**
+- city1: Lima
+- city2: Tokyo 
+- country1: Peru
+- country2: Japan
+
+**Resultado Esperado:** Se muestra la distancia entre estos dos puntos que es: 15487.75 km.
