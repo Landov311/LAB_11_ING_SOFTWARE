@@ -46,7 +46,7 @@ https://drive.google.com/file/d/1hJ5jRQSHDH3mAptd3FDgBcKa5xtsUZ9L/view?usp=shari
 
 **Resultado Esperado:** Se muestran las coordenadas de la ciudad 2 veces y la distancia es igual a 0.
 
-*** Casos Éxitos***
+***Casos Éxitos***
 **Caso éxito:** Se ingresan diferentes ciudades
 
 **Precondicion:** El usuario debe poseer el código api que creamos y conección a internet, después debe ingresar dos ciudades y países diferentes.
